@@ -4,6 +4,7 @@ package org.example.Controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 public class ControllerChrono {
@@ -20,6 +21,11 @@ public class ControllerChrono {
 
     @FXML
     private Button btnDetener;
+
+    @FXML
+    private Pane colorPane;
+    @FXML
+    private Button btnCambiarColor;
 
     @FXML
     private void iniciarCronometro() {
@@ -99,5 +105,18 @@ public class ControllerChrono {
 
     private void resumeCronometro() {
         startCronometro();
+    }
+
+    @FXML
+    private void cambiarColor() {
+        btnCambiarColor.setOnMousePressed(event -> {
+            // Al presionar el botón, cambia el color del Pane a rojo
+            colorPane.setStyle("-fx-background-color: #58D68D;");
+        });
+
+        btnCambiarColor.setOnMouseReleased(event -> {
+            // Al soltar el botón, elimina el color de fondo del Pane (vuelve a su color original)
+            colorPane.setStyle("");
+        });
     }
 }

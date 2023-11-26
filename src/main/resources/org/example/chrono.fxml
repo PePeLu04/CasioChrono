@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller.ControllerChrono">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller.ControllerChrono">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="783.0" layoutX="38.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../images/Casio.png" />
-         </image>
-      </ImageView>
-      <Text fx:id="displayTiempo" layoutX="246.0" layoutY="319.0" text="00:00:00:000" wrappingWidth="331.5593566894531">
-         <font>
-            <Font name="Franklin Gothic Medium Italic" size="55.0" />
-         </font>
-      </Text>
+      <StackPane prefHeight="600.0" prefWidth="800.0">
+            <ImageView fx:id="imageView" fitHeight="600.0" fitWidth="783.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Casio.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="colorPane" opacity="0.19">
+            <children>
+         
+                        <Button fx:id="btnCambiarColor" layoutX="72.0" layoutY="185.0" onAction="#cambiarColor" opacity="0.0" prefHeight="62.0" prefWidth="27.0" />
+               <Text fx:id="displayTiempo" layoutX="225.0" layoutY="319.0" text="00:00:00:000" wrappingWidth="331.5593566894531">
+                  <font>
+                     <Font name="Franklin Gothic Medium Italic" size="55.0" />
+                  </font>
+               </Text>
+            </children></Pane>
+      </StackPane>
       <Button fx:id="btnDetener" layoutX="645.0" layoutY="336.0" onAction="#detenerCronometro" prefHeight="62.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #8C5E58;                -fx-font-size: 14px; -fx-padding: 8px 16px;" text="DETENER" AnchorPane.bottomAnchor="202.0" AnchorPane.leftAnchor="645.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="336.0" />
       <Button fx:id="btnIniciar" layoutX="38.0" layoutY="342.0" onAction="#iniciarCronometro" prefHeight="50.0" prefWidth="128.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #4E9A6B;                -fx-font-size: 14px; -fx-padding: 8px 16px;" text="INICIAR" />
       <Button fx:id="btnReiniciar" layoutX="660.0" layoutY="182.0" onAction="#reiniciarCronometro" prefHeight="50.0" prefWidth="98.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #5E7F7C;                -fx-font-size: 14px; -fx-padding: 8px 16px;" text="REINICIAR">
