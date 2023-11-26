@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller.StartController">
+   <children>
+      <Label layoutX="244.0" layoutY="38.0" text="Bienvenido a Mi Cronómetro!">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="428.0" fitWidth="488.0" layoutX="186.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/cronometro.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="350.0" layoutY="105.0" onAction="#switchToChrono" mnemonicParsing="false" style=" -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px; -fx-padding: 10px 20px;" text="Empezar" />
+   </children>
+</AnchorPane>
