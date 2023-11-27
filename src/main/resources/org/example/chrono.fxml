@@ -13,10 +13,11 @@
                   <Image url="@../../images/Casio.png" />
                </image>
             </ImageView>
-            <Pane fx:id="colorPane" opacity="0.19">
+            <Pane opacity="0.19" prefHeight="398.0" prefWidth="544.0">
             <children>
-         
-                        <Button fx:id="btnCambiarColor" layoutX="72.0" layoutY="185.0" onAction="#cambiarColor" opacity="0.0" prefHeight="62.0" prefWidth="27.0" />
+
+                                                      <Button fx:id="btnCambiarColor" layoutX="72.0" layoutY="185.0" onAction="#cambiarColor" opacity="0.0" prefHeight="62.0" prefWidth="27.0" />
+               <Pane fx:id="colorPane" layoutX="218.0" layoutY="216.0" prefHeight="170.0" prefWidth="346.0" />
                <Text fx:id="displayTiempo" layoutX="225.0" layoutY="319.0" text="00:00:00:000" wrappingWidth="331.5593566894531">
                   <font>
                      <Font name="Franklin Gothic Medium Italic" size="55.0" />
